@@ -1,0 +1,48 @@
+.banner-solanje {
+  min-height: 70vh;
+  background: url("../img/pageBcg/SARdogs.png") center/cover no-repeat fixed;
+}
+
+.sar-dogs-sec {
+  max-width: 900px;
+  display: block;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.container {
+  margin: 15px 0;
+  font-size: 1rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.row .sar-item {
+  margin: 10px 30px;
+}
+
+.sar-dogs {
+  display: flex;
+}
+
+.naslov {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .banner-solanje {
+    clip-path: none;
+    min-height: calc(50vh - 126px) !important;
+  }
+}

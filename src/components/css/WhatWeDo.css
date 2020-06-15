@@ -1,0 +1,131 @@
+.show-cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-left: 4%;
+}
+
+.do-img {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.what-container {
+  position: relative;
+  display: flex;
+  transition: all 2s ease-in-out;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px var(--mainBlue);
+  overflow: hidden;
+  margin: 30px;
+  max-width: 360px;
+}
+
+.what-container:hover {
+  box-shadow: none;
+}
+
+.what-container .what-img {
+  display: flex;
+}
+
+.what-container .text-test {
+  opacity: 0;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 100%;
+  height: 100%;
+  background: var(--mainBlue);
+  color: var(--mainWhite);
+  padding: 0.3rem;
+  transition: all 1.2s ease-in-out;
+}
+
+.what-container:hover .text-test {
+  transition: all 1.2s ease-in-out;
+  opacity: 1;
+}
+
+.what-container .what-text {
+  text-align: center;
+  font-size: 1.2rem;
+  display: flex;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.obedience {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  cursor: pointer;
+  border: 2px solid;
+  padding: 0.5rem;
+  transition: all 1s ease-in-out;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 756px) {
+  .featured-img {
+    display: none;
+  }
+  .what-container {
+    margin: 15px;
+  }
+
+  .show-cards {
+    margin: 10px;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .what-container .what-text {
+    text-align: center;
+    font-size: 1rem;
+  }
+  .what-container .what-img {
+    width: auto;
+  }
+  .what-container {
+    margin: 0.5rem;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .show-cards {
+    margin: 10px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .show-cards {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 1250px) and (min-width: 990px) {
+  .what-container .what-text {
+    width: auto;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .what-container .what-text {
+    width: 200px;
+    font-size: 0.7rem;
+  }
+}

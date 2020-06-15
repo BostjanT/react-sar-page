@@ -1,0 +1,119 @@
+.footer {
+  background: rgba(0, 0, 0, 0.7);
+  color: var(--mainWhite);
+  padding: 20px 0;
+}
+
+.footer .row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-title {
+  border: 0.2rem solid var(--mainBlue);
+  padding: 1rem;
+}
+
+.footer h4 {
+  text-transform: capitalize;
+  font-size: 1.3rem;
+}
+
+.footer-icon {
+  font-size: 1.2rem;
+  color: var(--mainBlue);
+  padding-right: 0.3rem;
+}
+
+.footer span {
+  padding-top: 5px;
+}
+
+.footer-icon-fb {
+  font-size: 4rem;
+  color: var(--mainBlue);
+  padding-right: 1.5rem;
+  opacity: 0.7;
+}
+
+.footer-icon-img {
+  height: 60px;
+  width: auto;
+  padding-right: 0.7rem;
+  opacity: 0.7;
+}
+
+.footer-icon-img:hover {
+  opacity: 1;
+}
+
+.footer-icon:hover,
+.footer-icon-fb:hover {
+  color: var(--mainWhite);
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+  font-size: 1rem;
+}
+
+.footy {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.email {
+  text-decoration: none;
+  color: var(--mainWhite);
+}
+
+.email:hover {
+  text-decoration: none;
+  color: var(--mainWhite);
+}
+
+.email-2 {
+  text-decoration: none;
+  color: var(--mainWhite);
+}
+
+.email-2:hover {
+  text-decoration: none;
+  color: var(--mainBlack);
+}
+
+hr.store-hr {
+  border: 0.1rem solid var(--mainBlack);
+  width: 100%;
+}
+
+.react-icons {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.fb-icon {
+  height: 60px;
+  transition: all 1s ease;
+}
+.fb-icon:hover {
+  color: var(--mainBlue);
+}
+.mx-2 {
+  margin: 0 25px;
+}
+
+@media screen and (max-width: 1000px) {
+  .footer .row {
+    display: flex;
+    align-items: center;
+  }
+ 
+
+}

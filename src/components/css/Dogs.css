@@ -1,0 +1,81 @@
+.home-filler {
+  min-height: 60vh;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    100% 80%,
+    100% 100%,
+    60% 100%,
+    50% 95%,
+    40% 100%,
+    0 100%,
+    0 80%,
+    0 0
+  );
+  background: linear-gradient(rgba(33, 184, 239, 0.3), rgba(33, 184, 239, 0.3)),
+    url("../../img/pageBcg/imgBcg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@media screen and (max-width: 1000px) {
+  .home-filler {
+    clip-path: none;
+  }
+  .dogs-text {
+    width: 100% !important;
+    font-size: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+  }
+
+  .sar-item {
+    display: none;
+  }
+}
+
+.container-fluid {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.dogs-text {
+  width: 40%;
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+}
+
+.dogs-text-bold {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+}
+
+@media screen and (max-width: 1000px) {
+  .sar-dogs {
+    display: none;
+  }
+  .sar-dogs1 {
+    display: flex;
+  }
+}
+
+.sar-item {
+  box-shadow: 3px 5px 12px 6px rgb(11, 43, 54);
+}
