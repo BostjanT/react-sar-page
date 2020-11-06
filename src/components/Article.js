@@ -1,7 +1,10 @@
 import React from "react";
 import "./css/Article.css";
+import {useParams} from 'react-route-dom'
 function Article({ news }) {
+  const {articleId} = useParams()
   const { title, date, besedilo, id } = news.fields;
+  const news = news.filter(news => news.id === articleId)
   console.log(news);
   return (
     <div className="show-news" id={id}>
