@@ -1,6 +1,18 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import {useParams} from 'react-router-dom'
 import "../style.css";
-function SingleNews({ item }) {
+function SingleNews() {
+  const { articleId } = useParams();
+  const [allArticles, setAllArticles] = useState([]);
+  const [error, setError] = useState(null);
+  const API_SPACE_ID = "quuudgeu6kvg";
+  const API_TOKEN = "anFDgz6QfwXf8VYgCQQNCsE8KoJD2ZxLv3t-d1PMJzw";
+
+  const client = contentful.createClient({
+    space: API_SPACE_ID,
+    accessToken: API_TOKEN,
+  });
+  
   const row = {
     display: "flex",
     flexDirection: "row",
@@ -30,19 +42,39 @@ function SingleNews({ item }) {
     fontSize: "1rem",
     fontWeight: "500",
   };
+  
+   useEffect(() => {
+    client
+      .getEntries({ order: "-sys.createdAt", content_type: "klubskeNovice" })
+      .then(
+        (data) => {
+          setAllArticles(data.items);
+        },
+        (error) => {
+          setError(error);
+        }
+      );
+  }, []);
 
-  return (
-    <div style={row}>
-      <div style={column} id={item.fields.id}>
-        <img
-          style={style}
-          src={`https:${item.fields.image.fields.file.url}`}
-          alt="solo-img"
-        />
-        <h4 style={title}>{item.fields.title}</h4>
+  const singleArticle = allArticles.find(
+    (article) => article.fields.id.toString() === articleId
+  );
+  console.log(singleArticle);
+
+  return singleArticle ? (
+    <div className='article-container'>
+      <div className='show-article'>
+        <h1>{singleArticle.fields.title}</h1>
+        <img src={`https:${singleArticle.fields.image.fields.file.url}`} alt='article'/>
+        <h3>Datum objave: {singleArticle.fields.date}</h3>
+        <p>{singleArticle.fields.besedilo}</p>
       </div>
     </div>
+  ) : (
+    <h2>Loading...</h2>
   );
 }
+  
+
 
 export default SingleNews;
