@@ -12,6 +12,7 @@ import SmallGallery from "./components/SmallGallery";
 import BasicNews from "./pages/BasicNews";
 import ResevalniPes from "./pages/ResevalniPes";
 import Aktivnosti from "./pages/Aktivnosti";
+import SingleArticle from './pages/SingleArticle'
 
 import "./App.css";
 import "./style.css";
@@ -43,8 +44,8 @@ function App() {
         <Route exact path="/novice">
           <Articles />
         </Route>
-        <Route path="/novice/:articleID">
-          <Article />
+        <Route path="/novice/:articleId">
+          <SingleArticle />
         </Route> 
         <Route path="/galerija">
           <SmallGallery />
